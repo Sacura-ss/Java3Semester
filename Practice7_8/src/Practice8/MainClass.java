@@ -12,11 +12,11 @@ public class MainClass {
         ConcurrentLinkedQueue list1 = new ConcurrentLinkedQueue() {};
         WaitList<Integer> list = new WaitList<Integer>(list1);
         BoudedWaitList<Integer> boundedList = new BoudedWaitList<Integer>(4);
-        UnfairWaitList<Double> unfairList = new UnfairWaitList<Double>();
+        UnfairWaitList<Integer> unfairList = new UnfairWaitList<Integer>();
         for(int i = 0; i < 6; i++) {
             list.add(i);
             boundedList.add(i);
-            unfairList.add((double)5-i);
+            unfairList.add(5-i);
         }
         System.out.println(list);
         System.out.println(boundedList);
@@ -26,13 +26,13 @@ public class MainClass {
 
         list.remove();
         boundedList.remove();
-        unfairList.remove(3.0);
+        unfairList.remove(5);
         System.out.println(list);
         System.out.println(boundedList);
         System.out.println(unfairList);
         System.out.println("\n");
 
-        double num = 8.0;
+        int num = 8;
         if (unfairList.contains(num)) System.out.println(num +" is in list");
         else System.out.println(num +" is not in list");
 

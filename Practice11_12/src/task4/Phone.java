@@ -1,4 +1,4 @@
-package practice12;
+package practice11_12;
 
 import java.io.BufferedReader;
 import java.io.IOException;
